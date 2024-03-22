@@ -3,6 +3,9 @@ from torch.utils.data import DataLoader
 from torchvision.datasets import ImageFolder
 from torchvision import transforms
 
+
+
+
 dir_path=r"C:\Users\91808\Downloads\data_car"
 
 
@@ -25,7 +28,8 @@ print(type(data_loader))
 
 for image,labels in data_loader:
     for img in image:
-        img=img.transpose(0,2)
+        # img=img.transpose(0,2)
         plt.imshow(img)
         plt.show()
         print(img.shape)
+    print(image.shape)
